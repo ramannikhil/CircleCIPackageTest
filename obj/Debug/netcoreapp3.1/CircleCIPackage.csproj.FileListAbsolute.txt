@@ -1,0 +1,14 @@
+C:\Users\Raman Nikhil B\source\personal_repo\CircleCIPackage\CircleCIPackage\bin\Debug\netcoreapp3.1\CircleCIPackage.exe
+C:\Users\Raman Nikhil B\source\personal_repo\CircleCIPackage\CircleCIPackage\bin\Debug\netcoreapp3.1\CircleCIPackage.deps.json
+C:\Users\Raman Nikhil B\source\personal_repo\CircleCIPackage\CircleCIPackage\bin\Debug\netcoreapp3.1\CircleCIPackage.runtimeconfig.json
+C:\Users\Raman Nikhil B\source\personal_repo\CircleCIPackage\CircleCIPackage\bin\Debug\netcoreapp3.1\CircleCIPackage.runtimeconfig.dev.json
+C:\Users\Raman Nikhil B\source\personal_repo\CircleCIPackage\CircleCIPackage\bin\Debug\netcoreapp3.1\CircleCIPackage.dll
+C:\Users\Raman Nikhil B\source\personal_repo\CircleCIPackage\CircleCIPackage\bin\Debug\netcoreapp3.1\CircleCIPackage.pdb
+C:\Users\Raman Nikhil B\source\personal_repo\CircleCIPackage\CircleCIPackage\obj\Debug\netcoreapp3.1\CircleCIPackage.csproj.AssemblyReference.cache
+C:\Users\Raman Nikhil B\source\personal_repo\CircleCIPackage\CircleCIPackage\obj\Debug\netcoreapp3.1\CircleCIPackage.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Raman Nikhil B\source\personal_repo\CircleCIPackage\CircleCIPackage\obj\Debug\netcoreapp3.1\CircleCIPackage.AssemblyInfoInputs.cache
+C:\Users\Raman Nikhil B\source\personal_repo\CircleCIPackage\CircleCIPackage\obj\Debug\netcoreapp3.1\CircleCIPackage.AssemblyInfo.cs
+C:\Users\Raman Nikhil B\source\personal_repo\CircleCIPackage\CircleCIPackage\obj\Debug\netcoreapp3.1\CircleCIPackage.csproj.CoreCompileInputs.cache
+C:\Users\Raman Nikhil B\source\personal_repo\CircleCIPackage\CircleCIPackage\obj\Debug\netcoreapp3.1\CircleCIPackage.dll
+C:\Users\Raman Nikhil B\source\personal_repo\CircleCIPackage\CircleCIPackage\obj\Debug\netcoreapp3.1\CircleCIPackage.pdb
+C:\Users\Raman Nikhil B\source\personal_repo\CircleCIPackage\CircleCIPackage\obj\Debug\netcoreapp3.1\CircleCIPackage.genruntimeconfig.cache
