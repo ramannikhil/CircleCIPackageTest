@@ -66,7 +66,18 @@ jobs:
       # - run: choco install gitversion.portable
       #- run: choco install netfx-4.8-devpack
       # - run: choco install netfx-4.7.2-devpack
-      - run: dotnet tool install -g dotnet-core-uninstall
+      # - run: dotnet tool install -g dotnet-core-uninstall
+      - run:
+          name: Run PowerShell script
+          command: |
+            # Clone the GitHub repository
+            git clone https://github.com/ramannikhil/CircleC-core
+
+            # Change to the directory containing the PowerShell script
+            cd repo
+
+            # Run the PowerShell script
+            powershell.exe -File dotnet-core-uninstall-1.6.0.msi
       - run: dotnet --list-sdks
       - run: dotnet-core-uninstall remove --all-below 6.0 --sdk --force
       - run: dotnet --list-sdks
