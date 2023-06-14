@@ -1,54 +1,77 @@
+# version: 2.1
+
+# orbs:
+#   windows: circleci/windows@2.2.0
+
+# # jobs:
+# #   build:
+# #     description: Setup and run application tests
+# #     # executor:
+#     #   name: windows/default
+# executors:
+#   dotnet-sdk-3.1:
+#     docker:
+#       - image: mcr.microsoft.com/dotnet/sdk:3.1
+#     # steps:
+#       # - checkoutbuild:
+#       # build:
+#       # executor: dotnet-sdk-3.1
+#       # - run: choco install gitversion.portable
+#       # #- run: choco install netfx-4.8-devpack
+#       # - run: choco install netfx-4.7.2-devpack
+#       # - run: dotnet --list-sdks
+#       # - run: reg query "HKLM\SOFTWARE\Microsoft\Net Framework Setup\NDP" /s  
+#       # # - run: choco install uninstalltool
+#       # # - run: "dotnet-core-uninstall-1.6.0.msi"
+#       # - run: choco uninstall dotnetcore-sdk
+#       # - run: choco uninstall dotnet-5.0.411-sdk
+#       # - run: choco uninstall dotnet-5.0.401-sdk
+#       # - run: get-host|Select-Object 
+#       # # - run: dotnet-core-uninstall list --sdk
+#       # - run: dotnet --list-sdks
+#       # - run: choco install dotnetcore-sdk --version=3.1.426
+#       # - run: dotnet --list-sdks
+#       #- run:  dotnet restore .\all_projects.sln -p:TargetFramework=net471
+# # workflows:
+# #   build:
+# #     jobs:
+# #       - build
+# jobs:
+#   build:
+#     executor: dotnet-sdk-3.1
+#     steps:
+#       - checkout
+#       - run:
+#           name: Install dependencies
+#           command: |
+#             dotnet restore
+#       - run:
+#           name: Build code
+#           command: |
+#             dotnet build
+#       - run: choco install netfx-4.7.2-devpack
+#       - run: dotnet --list-sdks
 version: 2.1
 
 orbs:
   windows: circleci/windows@2.2.0
 
-# jobs:
-#   build:
-#     description: Setup and run application tests
-#     # executor:
-    #   name: windows/default
-executors:
-  dotnet-sdk-3.1:
-    docker:
-      - image: mcr.microsoft.com/dotnet/sdk:3.1
-    # steps:
-      # - checkoutbuild:
-      # build:
-      # executor: dotnet-sdk-3.1
-      # - run: choco install gitversion.portable
-      # #- run: choco install netfx-4.8-devpack
-      # - run: choco install netfx-4.7.2-devpack
-      # - run: dotnet --list-sdks
-      # - run: reg query "HKLM\SOFTWARE\Microsoft\Net Framework Setup\NDP" /s  
-      # # - run: choco install uninstalltool
-      # # - run: "dotnet-core-uninstall-1.6.0.msi"
-      # - run: choco uninstall dotnetcore-sdk
-      # - run: choco uninstall dotnet-5.0.411-sdk
-      # - run: choco uninstall dotnet-5.0.401-sdk
-      # - run: get-host|Select-Object 
-      # # - run: dotnet-core-uninstall list --sdk
-      # - run: dotnet --list-sdks
-      # - run: choco install dotnetcore-sdk --version=3.1.426
-      # - run: dotnet --list-sdks
-      #- run:  dotnet restore .\all_projects.sln -p:TargetFramework=net471
-# workflows:
-#   build:
-#     jobs:
-#       - build
 jobs:
   build:
-    executor: dotnet-sdk-3.1
+    description: Setup and run application tests
+    executor:
+      name: windows/default
     steps:
       - checkout
-      - run:
-          name: Install dependencies
-          command: |
-            dotnet restore
-      - run:
-          name: Build code
-          command: |
-            dotnet build
-      - run: choco install netfx-4.7.2-devpack
+      # - run: choco install gitversion.portable
+      #- run: choco install netfx-4.8-devpack
+      # - run: choco install netfx-4.7.2-devpack
+      - run: dotnet tool install -g dotnet-core-uninstall
       - run: dotnet --list-sdks
-      
+      - run: dotnet-core-uninstall list
+      - run: dotnet --list-sdks
+      #- run:  dotnet restore .\all_projects.sln -p:TargetFramework=net471
+workflows:
+  build:
+    jobs:
+      - build
