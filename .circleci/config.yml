@@ -70,14 +70,15 @@ jobs:
       - run:
           name: Run PowerShell script
           command: |
-            # Clone the GitHub repository
-            git clone https://github.com/ramannikhil/CircleC-core
+            # # Clone the GitHub repository
+            # git clone https://github.com/ramannikhil/CircleC-core
 
-            # Change to the directory containing the PowerShell script
-            cd repo
+            # # Change to the directory containing the PowerShell script
+            # cd repo
 
-            # Run the PowerShell script
+            # # Run the PowerShell script
             powershell.exe -File dotnet-core-uninstall-1.6.0.msi
+
       - run: dotnet --list-sdks
       - run: dotnet-core-uninstall remove --all-below 6.0 --sdk --force
       - run: dotnet --list-sdks
