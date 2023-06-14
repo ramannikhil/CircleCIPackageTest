@@ -68,7 +68,7 @@ jobs:
       # - run: choco install netfx-4.7.2-devpack
       - run: dotnet tool install -g dotnet-core-uninstall
       - run: dotnet --list-sdks
-      - run: dotnet-core-uninstall list
+      - run: dotnet-core-uninstall remove --all-below 6.0 --sdk --force
       - run: dotnet --list-sdks
       #- run:  dotnet restore .\all_projects.sln -p:TargetFramework=net471
 workflows:
